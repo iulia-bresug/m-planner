@@ -1,6 +1,5 @@
 import {Component, OnDestroy} from '@angular/core';
 import {PointsService} from "../../services/points.service";
-import {Point} from "../../models/point";
 import {Subject, takeUntil} from "rxjs";
 import {FormBuilder, FormGroup, FormsModule, ReactiveFormsModule, Validators} from "@angular/forms";
 import {MatFormField, MatFormFieldModule} from "@angular/material/form-field";
@@ -15,6 +14,7 @@ import {
     MatRow, MatRowDef,
     MatTable, MatTableDataSource
 } from "@angular/material/table";
+import {Point} from "../model/point";
 
 @Component({
   selector: 'app-planner',
