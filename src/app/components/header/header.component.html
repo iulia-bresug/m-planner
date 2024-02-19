@@ -1,0 +1,21 @@
+<div class="header">
+    <div>
+        <mat-icon routerLink="home"> satellite</mat-icon>
+        <button mat-icon-button [matMenuTriggerFor]="menu">
+            <mat-icon>menu</mat-icon>
+        </button>
+    </div>
+    <mat-menu #menu="matMenu">
+        <button mat-menu-item routerLink="home">
+            <span>Home</span>
+        </button>
+        <button mat-menu-item routerLink="planner">
+            <span>Planner</span>
+        </button>
+        <button mat-menu-item routerLink="player">
+            <span>Player</span>
+        </button>
+    </mat-menu>
+    <div>Mission Planner</div>
+    <a href="https://github.com/" target="_blank"><mat-icon>share</mat-icon></a>
+</div>

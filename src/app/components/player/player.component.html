@@ -1,0 +1,38 @@
+<h1>Player</h1>
+
+<p *ngIf="!points.length">No points added.</p>
+<ng-container *ngIf="points.length">
+    <div class="my">
+        <h2>Mission</h2>
+        <div *ngFor="let point of points" class="point-row">
+            <div class="mr">{{point.number}}</div>
+            <div>{{point.name}}</div>
+        </div>
+    </div>
+
+
+    <div class="mission-display">
+        <ng-container
+            *ngFor="let points of pointsMapped"
+        >
+            <div class="point-pair">
+                <ng-container *ngFor="let point of points">
+                    <div
+                        *ngIf="point"
+                        class="point"
+                        matTooltipPosition="above"
+                        [matTooltip]="point?.name"
+                    ></div>
+                </ng-container>
+            </div>
+        </ng-container>
+    </div>
+    <div class="my">
+        <button (click)="onClickPlay()" class="mr">
+            <mat-icon>play_circle_outline</mat-icon>
+        </button>
+        <button (click)="onClickStop()">
+            <mat-icon>stop</mat-icon>
+        </button>
+    </div>
+</ng-container>
